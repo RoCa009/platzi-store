@@ -16,7 +16,11 @@ script:
 
 deploy: 
   provider: pages
-  skip_cleanup: true
-  keep_history: true
-  github_token: $GITHUB_TOKEN  
-  local_dir   
+  skip-cleanup: true
+  keep-history: true
+  github-token: $GITHUB_TOKEN  
+  local-dir: dist/
+  target-branch: gh-pages
+  commit-message: "Deploy de proyecto :)"
+  on:
+    branch: master
